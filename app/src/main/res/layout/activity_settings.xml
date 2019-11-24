@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/settingScrollView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginHorizontal="130dp"
+                    android:layout_marginTop="80dp"
+                    android:id="@+id/profilePicture"
+                    android:src="@drawable/ic_action_profile"
+                    app:civ_border_color="@color/colorPrimary"
+                    app:civ_border_width="4dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    app:civ_shadow_color="@color/colorPrimary"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="120dp"
+                    android:id="@+id/removeProfile"
+                    android:layout_marginTop="90dp"
+                    android:layout_gravity="top|left"
+                    app:civ_circle_color="@color/colorAccent"
+                    android:src="@drawable/ic_action_cancel_padding"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="10dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    app:civ_shadow_color="#3f51b5"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/editProfile"
+                    android:layout_marginRight="120dp"
+                    android:layout_marginTop="90dp"
+                    android:layout_gravity="top|right"
+                    app:civ_circle_color="@color/colorAccent"
+                    android:src="@drawable/ic_action_edit"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="10dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_radius="10"
+                    app:civ_shadow_color="@color/colorAccent"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="250dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginHorizontal="100dp"
+                android:layout_marginStart="0dp"
+                android:orientation="vertical"
+                android:padding="15dp">
+                <Switch
+                    android:id="@+id/switchToDarkMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="Dark Mode"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter Name"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:enabled="false"
+                    android:id="@+id/profile_name"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter email"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:maxLength="50"
+                    android:enabled="false"
+                    android:maxLines="1"
+                    android:id="@+id/profile_email"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter old password"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:maxLength="50"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:id="@+id/profile_old_password"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></View>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enter new password"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textStyle="bold"/>
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:maxLength="50"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:id="@+id/profile_new_password"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"></View>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginLeft="-4dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:onClick="updateProfile"
+                    android:text="UPDATE"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <!--<include layout="@layout/content_settings" />-->
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+        <!--android:id="@+id/fab"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="bottom|end"-->
+        <!--android:layout_margin="@dimen/fab_margin"-->
+        <!--app:srcCompat="@drawable/ic_action_edit_no_padding" />-->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

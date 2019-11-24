@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.demo.easycloud.MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_action_search"
+        android:orderInCategory="100"
+        android:title="Search"
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_web_login"
+        android:orderInCategory="100"
+        android:title="@string/action_web_login"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_view_trash"
+        android:orderInCategory="100"
+        android:title="@string/action_view_trash"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_dark_theme"
+        android:orderInCategory="100"
+        android:title="Dark Theme"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_light_theme"
+        android:orderInCategory="100"
+        android:title="Light Theme"
+        android:visible="false"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_logout"
+        android:orderInCategory="100"
+        android:title="Logout"/>
+</menu>

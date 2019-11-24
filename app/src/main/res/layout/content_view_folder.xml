@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ViewFolderActivity"
+    tools:showIn="@layout/activity_view_folder">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/files"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newFolder"
+        android:src="@drawable/ic_action_new_folder"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/uploadFile"
+        android:src="@drawable/ic_action_upload_file"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/fab"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_add"
+        android:layout_margin="@dimen/fab_margin"
+        android:layout_gravity="bottom|end"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorAccent"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/progressbar_folder"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
